@@ -23,3 +23,95 @@ Date,Currency,Impact,Detail,Actual,Forecast,Previous
 2024-10-17,USD,Low Impact Expected,Natural Gas Storage,76B,80B,82B
 2024-10-17,USD,Medium Impact Expected,Crude Oil Inventories,-2.2M,1.8M,5.8M
 2024-10-17,USD,Low Impact Expected,TIC Long-Term Purchases,111.4B,58.9B,137.9B
+2024-10-17,JPY,Low Impact Expected,Trade Balance,-0.19T,-0.49T,-0.47T
+2024-10-17,AUD,High Impact Expected,Employment Change,64.1K,25.2K,42.6K
+2024-10-17,AUD,High Impact Expected,Unemployment Rate,4.1%,4.2%,4.1%
+2024-10-17,AUD,Low Impact Expected,NAB Quarterly Business Confidence,-6,-2,
+2024-10-17,JPY,Low Impact Expected,Tertiary Industry Activity m/m,-1.1%,-0.2%,2.2%
+2024-10-17,CHF,Low Impact Expected,Trade Balance,4.95B,4.85B,4.74B
+2024-10-17,EUR,Low Impact Expected,Spanish 10-y Bond Auction,2.92|1.7,3.04|2.1,
+2024-10-17,EUR,Low Impact Expected,Final Core CPI y/y,2.7%,2.7%,2.7%
+2024-10-17,EUR,Low Impact Expected,Final CPI y/y,1.7%,1.8%,1.8%
+2024-10-17,EUR,Low Impact Expected,Italian Trade Balance,1.43B,5.55B,6.82B
+2024-10-17,EUR,Low Impact Expected,Trade Balance,11.0B,17.8B,13.7B
+2024-10-17,EUR,High Impact Expected,Main Refinancing Rate,3.40%,3.40%,3.65%
+2024-10-17,CAD,Low Impact Expected,Foreign Securities Purchases,9.97B,9.50B,10.97B
+2024-10-17,USD,High Impact Expected,Core Retail Sales m/m,0.5%,0.1%,0.2%
+2024-10-17,USD,High Impact Expected,Retail Sales m/m,0.4%,0.3%,0.1%
+2024-10-17,USD,High Impact Expected,Unemployment Claims,241K,241K,260K
+2024-10-17,USD,Medium Impact Expected,Philly Fed Manufacturing Index,10.3,4.2,1.7
+2024-10-17,USD,Low Impact Expected,Capacity Utilization Rate,77.5%,77.9%,77.8%
+2024-10-17,USD,Low Impact Expected,Industrial Production m/m,-0.3%,-0.1%,0.3%
+2024-10-17,USD,Low Impact Expected,Business Inventories m/m,0.3%,0.3%,0.3%
+2024-10-17,USD,Low Impact Expected,NAHB Housing Market Index,43,43,41
+2024-10-17,USD,Low Impact Expected,Natural Gas Storage,76B,80B,82B
+2024-10-17,USD,Medium Impact Expected,Crude Oil Inventories,-2.2M,1.8M,5.8M
+2024-10-17,USD,Low Impact Expected,TIC Long-Term Purchases,111.4B,58.9B,137.9B
+2024-10-17,JPY,Low Impact Expected,Trade Balance,-0.19T,-0.49T,-0.47T
+2024-10-17,AUD,High Impact Expected,Employment Change,64.1K,25.2K,42.6K
+2024-10-17,AUD,High Impact Expected,Unemployment Rate,4.1%,4.2%,4.1%
+2024-10-17,AUD,Low Impact Expected,NAB Quarterly Business Confidence,-6,-2,
+2024-10-17,JPY,Low Impact Expected,Tertiary Industry Activity m/m,-1.1%,-0.2%,2.2%
+2024-10-17,CHF,Low Impact Expected,Trade Balance,4.95B,4.85B,4.74B
+2024-10-17,EUR,Low Impact Expected,Spanish 10-y Bond Auction,2.92|1.7,3.04|2.1,
+2024-10-17,EUR,Low Impact Expected,Final Core CPI y/y,2.7%,2.7%,2.7%
+2024-10-17,EUR,Low Impact Expected,Final CPI y/y,1.7%,1.8%,1.8%
+2024-10-17,EUR,Low Impact Expected,Italian Trade Balance,1.43B,5.55B,6.82B
+2024-10-17,EUR,Low Impact Expected,Trade Balance,11.0B,17.8B,13.7B
+2024-10-17,EUR,High Impact Expected,Main Refinancing Rate,3.40%,3.40%,3.65%
+2024-10-17,CAD,Low Impact Expected,Foreign Securities Purchases,9.97B,9.50B,10.97B
+2024-10-17,USD,High Impact Expected,Core Retail Sales m/m,0.5%,0.1%,0.2%
+2024-10-17,USD,High Impact Expected,Retail Sales m/m,0.4%,0.3%,0.1%
+2024-10-17,USD,High Impact Expected,Unemployment Claims,241K,241K,260K
+2024-10-17,USD,Medium Impact Expected,Philly Fed Manufacturing Index,10.3,4.2,1.7
+2024-10-17,USD,Low Impact Expected,Capacity Utilization Rate,77.5%,77.9%,77.8%
+2024-10-17,USD,Low Impact Expected,Industrial Production m/m,-0.3%,-0.1%,0.3%
+2024-10-17,USD,Low Impact Expected,Business Inventories m/m,0.3%,0.3%,0.3%
+2024-10-17,USD,Low Impact Expected,NAHB Housing Market Index,43,43,41
+2024-10-17,USD,Low Impact Expected,Natural Gas Storage,76B,80B,82B
+2024-10-17,USD,Medium Impact Expected,Crude Oil Inventories,-2.2M,1.8M,5.8M
+2024-10-17,USD,Low Impact Expected,TIC Long-Term Purchases,111.4B,58.9B,137.9B
+2024-10-17,JPY,Low Impact Expected,Trade Balance,-0.19T,-0.49T,-0.47T
+2024-10-17,AUD,High Impact Expected,Employment Change,64.1K,25.2K,42.6K
+2024-10-17,AUD,High Impact Expected,Unemployment Rate,4.1%,4.2%,4.1%
+2024-10-17,AUD,Low Impact Expected,NAB Quarterly Business Confidence,-6,-2,
+2024-10-17,JPY,Low Impact Expected,Tertiary Industry Activity m/m,-1.1%,-0.2%,2.2%
+2024-10-17,CHF,Low Impact Expected,Trade Balance,4.95B,4.85B,4.74B
+2024-10-17,EUR,Low Impact Expected,Spanish 10-y Bond Auction,2.92|1.7,3.04|2.1,
+2024-10-17,EUR,Low Impact Expected,Final Core CPI y/y,2.7%,2.7%,2.7%
+2024-10-17,EUR,Low Impact Expected,Final CPI y/y,1.7%,1.8%,1.8%
+2024-10-17,EUR,Low Impact Expected,Italian Trade Balance,1.43B,5.55B,6.82B
+2024-10-17,EUR,Low Impact Expected,Trade Balance,11.0B,17.8B,13.7B
+2024-10-17,EUR,High Impact Expected,Main Refinancing Rate,3.40%,3.40%,3.65%
+2024-10-17,CAD,Low Impact Expected,Foreign Securities Purchases,9.97B,9.50B,10.97B
+2024-10-17,USD,High Impact Expected,Core Retail Sales m/m,0.5%,0.1%,0.2%
+2024-10-17,USD,High Impact Expected,Retail Sales m/m,0.4%,0.3%,0.1%
+2024-10-17,USD,High Impact Expected,Unemployment Claims,241K,241K,260K
+2024-10-17,USD,Medium Impact Expected,Philly Fed Manufacturing Index,10.3,4.2,1.7
+2024-10-17,USD,Low Impact Expected,Capacity Utilization Rate,77.5%,77.9%,77.8%
+2024-10-17,USD,Low Impact Expected,Industrial Production m/m,-0.3%,-0.1%,0.3%
+2024-10-17,USD,Low Impact Expected,Business Inventories m/m,0.3%,0.3%,0.3%
+2024-10-17,USD,Low Impact Expected,NAHB Housing Market Index,43,43,41
+2024-10-17,USD,Low Impact Expected,Natural Gas Storage,76B,80B,82B
+2024-10-17,USD,Medium Impact Expected,Crude Oil Inventories,-2.2M,1.8M,5.8M
+2024-10-17,USD,Low Impact Expected,TIC Long-Term Purchases,111.4B,58.9B,137.9B
+2024-10-17,JPY,Low Impact Expected,Trade Balance,-0.19T,-0.49T,-0.47T
+2024-10-17,AUD,High Impact Expected,Employment Change,64.1K,25.2K,42.6K
+2024-10-17,AUD,High Impact Expected,Unemployment Rate,4.1%,4.2%,4.1%
+2024-10-17,AUD,Low Impact Expected,NAB Quarterly Business Confidence,-6,-2,
+2024-10-17,JPY,Low Impact Expected,Tertiary Industry Activity m/m,-1.1%,-0.2%,2.2%
+2024-10-17,CHF,Low Impact Expected,Trade Balance,4.95B,4.85B,4.74B
+2024-10-17,EUR,Low Impact Expected,Spanish 10-y Bond Auction,2.92|1.7,3.04|2.1,
+2024-10-17,EUR,Low Impact Expected,Final Core CPI y/y,2.7%,2.7%,2.7%
+2024-10-17,EUR,Low Impact Expected,Final CPI y/y,1.7%,1.8%,1.8%
+2024-10-17,EUR,Low Impact Expected,Italian Trade Balance,1.43B,5.55B,6.82B
+2024-10-17,EUR,Low Impact Expected,Trade Balance,11.0B,17.8B,13.7B
+2024-10-17,EUR,High Impact Expected,Main Refinancing Rate,3.40%,3.40%,3.65%
+2024-10-17,CAD,Low Impact Expected,Foreign Securities Purchases,9.97B,9.50B,10.97B
+2024-10-17,USD,High Impact Expected,Core Retail Sales m/m,0.5%,0.1%,0.2%
+2024-10-17,USD,High Impact Expected,Retail Sales m/m,0.4%,0.3%,0.1%
+2024-10-17,USD,High Impact Expected,Unemployment Claims,241K,241K,260K
+2024-10-17,USD,Medium Impact Expected,Philly Fed Manufacturing Index,10.3,4.2,1.7
+2024-10-17,USD,Low Impact Expected,Capacity Utilization Rate,77.5%,77.9%,77.8%
+2024-10-17,USD,Low Impact Expected,Industrial Production m/m,-0.3%,-0.1%,0.3%
+

@@ -11,10 +11,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 import pandas as pd
-# from schedule import every, repeat, run_pending
 
 
-# @repeat(every().day.at("21:58", "Europe/Prague"))
+# FIXME: correct assign value and columns
 def forex_calendar():
     # Regex pattern to match time strings in the format h:mmam or h:mmpm
     TIME_PATTERN = r"\b\d{1,2}:\d{2}(am|pm)\b"
@@ -117,6 +116,3 @@ class WebDriverConnector:
 
 if __name__ == "__main__":
     forex_calendar()
-    # while True:
-    #     run_pending()
-    #     time.sleep(1)

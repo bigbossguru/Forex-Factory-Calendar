@@ -7,7 +7,7 @@ cd ../
 echo "Root repository path: $(pwd)"
 
 # Confirm unset crontab task
-(crontab -l | grep -v "\*/5 \* \* \* \* $(pwd)/.venv/bin/python3 $(pwd)/main.py") | crontab -
+(crontab -l | grep -v "\*/5 \* \* \* \* $(pwd)/.venv/bin/python3 $(pwd)/scraper.py") | crontab -
 
 
 # Confirm set crontab task
