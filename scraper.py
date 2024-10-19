@@ -1,4 +1,5 @@
 import datetime
+import argparse
 from pathlib import Path
 
 from selenium.webdriver.common.by import By
@@ -9,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import pandas as pd
 
 from utils.web_connector import WebDriverConnector
-from utils.utils import get_last_or_actual_work_datetime, save_to_csv, check_date_in_csv
+from utils.utils import get_last_or_actual_work_datetime, save_to_csv, check_date_in_csv, string_to_dt
 
 
 KEYS = {
@@ -23,8 +24,9 @@ KEYS = {
 FILEPATH = Path(__file__).parent / "output" / "calendar.csv"
 
 
-def forex_calendar() -> None:
-    workday_dt = get_last_or_actual_work_datetime()
+def forex_calendar(args) -> None:
+    arg_dt = string_to_dt(args.date)
+    workday_dt = arg_dt or get_last_or_actual_work_datetime()
 
     if check_date_in_csv(FILEPATH, workday_dt):
         return None
@@ -70,4 +72,7 @@ def get_cells_value(row: WebElement, dt: datetime.datetime) -> list:
 
 
 if __name__ == "__main__":
-    forex_calendar()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-d", "--date", help="date format YYYY.MM.DD")
+    args = parser.parse_args()
+    forex_calendar(args)

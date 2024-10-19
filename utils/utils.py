@@ -60,3 +60,10 @@ def check_date_in_csv(csv_file: str | Path, date_to_check: datetime) -> bool:
 
     except Exception:
         return False
+
+
+def string_to_dt(date_string) -> datetime | None:
+    try:
+        return datetime.strptime(date_string, "%Y-%m-%d")
+    except Exception:
+        return None
