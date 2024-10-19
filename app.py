@@ -29,6 +29,6 @@ if st.button("Refresh Data"):
 
 # Display the DataFrame
 if st.session_state.dataframe is not None:
-    st.dataframe(st.session_state.dataframe, use_container_width=True, height=700)
+    st.dataframe(st.session_state.dataframe, use_container_width=True, height=600)
 else:
     st.info("Please ensure the CSV file is available to visualize the data.")
