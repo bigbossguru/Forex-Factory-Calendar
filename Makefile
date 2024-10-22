@@ -18,3 +18,7 @@ stop-service:
 
 remove-service:
 	sudo rm -rf /etc/systemd/system/forexwebapp.service
+
+clean:
+	rm -rf .venv
+	find . -type d -name '__pycache__' -exec rm -r {} +

@@ -7,7 +7,6 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-
 class WebDriverConnector:
     def __init__(self) -> None:
         self.driver = None
@@ -25,7 +24,9 @@ class WebDriverConnector:
 
     def _get_chrome_service(self) -> ChromeService:
         if platform.machine() == "aarch64":
-            chromedriver_path = os.getenv("CHROMEDRIVER", str(Path("~/chromedriver/chromedriver").expanduser()))
+            chromedriver_path = os.getenv(
+                "CHROMEDRIVER", str(Path("~/chromedriver/chromedriver").expanduser())
+            )
             return ChromeService(executable_path=chromedriver_path)
         else:
             return ChromeService(ChromeDriverManager().install())
@@ -41,4 +42,3 @@ class WebDriverConnector:
         # Clean up and close the driver
         if self.driver:
             self.driver.quit()
-

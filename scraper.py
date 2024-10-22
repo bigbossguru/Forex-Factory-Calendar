@@ -2,12 +2,11 @@ import datetime
 import argparse
 from pathlib import Path
 
+import pandas as pd
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
-
-import pandas as pd
 
 from utils.web_connector import WebDriverConnector
 from utils.utils import get_last_or_actual_work_datetime, save_to_csv, string_to_dt
@@ -59,12 +58,12 @@ def forex_calendar(args) -> None:
 
 
 def get_cells_value(row: WebElement, dt: datetime.datetime, args) -> dict | None:
-    cells_value = {"Date": dt.date().strftime('%Y-%m-%d')}
+    cells_value = {"Date": dt.date().strftime("%Y-%m-%d")}
     for key, class_name in KEYS.items():
         text = row.find_element(By.XPATH, f'.//td[@class="{class_name}"]').text.strip()
         if key == "Impact":
             text = row.find_element(By.XPATH, ".//span[@title]").get_attribute("title")
-            if args.impact.lower() not in text.lower():
+            if args.impact not in text.lower():
                 return None
         cells_value[key] = text.strip()
     return cells_value
@@ -72,7 +71,19 @@ def get_cells_value(row: WebElement, dt: datetime.datetime, args) -> dict | None
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-d", "--date", help="date format YYYY-MM-DD")
-    parser.add_argument("-i", "--impact", help="select one of them: Low, Medium, High. Default: All impacts")
+    parser.add_argument(
+        "-d",
+        "--date",
+        type=str.lower,
+        default="",
+        help="date format YYYY-MM-DD",
+    )
+    parser.add_argument(
+        "-i",
+        "--impact",
+        type=str.lower,
+        default="",
+        help="select one of them: Low, Medium, High. Default: All impacts",
+    )
     args = parser.parse_args()
     forex_calendar(args)
