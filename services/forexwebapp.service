@@ -1,0 +1,13 @@
+[Unit]
+Description=Forex Web Application
+After=multi-user.target
+
+[Service]
+User=boss
+Type=simple
+WorkingDirectory=/home/boss/development/Forex-Factory-Calendar
+ExecStart=/home/boss/development/Forex-Factory-Calendar/.venv/bin/streamlit run app.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
