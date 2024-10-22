@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import pandas as pd
 
 from utils.web_connector import WebDriverConnector
-from utils.utils import get_last_or_actual_work_datetime, save_to_csv, check_date_in_csv, string_to_dt
+from utils.utils import get_last_or_actual_work_datetime, save_to_csv, string_to_dt
 
 
 KEYS = {
@@ -27,9 +27,6 @@ FILEPATH = Path(__file__).parent / "output" / "calendar.csv"
 def forex_calendar(args) -> None:
     arg_dt = string_to_dt(args.date)
     workday_dt = arg_dt or get_last_or_actual_work_datetime()
-
-    if check_date_in_csv(FILEPATH, workday_dt):
-        return None
 
     with WebDriverConnector() as driver:
 
@@ -50,9 +47,9 @@ def forex_calendar(args) -> None:
 
         try:
             for row in rows[4:]:
-                cells_value = get_cells_value(row, workday_dt)
+                cells_value = get_cells_value(row, workday_dt, args)
 
-                if len(cells_value) >= 6:
+                if cells_value and len(cells_value) >= 6 and cells_value["Actual"]:
                     forex_data.append(cells_value)
         except Exception:
             return None
@@ -61,18 +58,21 @@ def forex_calendar(args) -> None:
     save_to_csv(df, FILEPATH)
 
 
-def get_cells_value(row: WebElement, dt: datetime.datetime) -> list:
-    cells_value = {"Date": dt.date()}
+def get_cells_value(row: WebElement, dt: datetime.datetime, args) -> dict | None:
+    cells_value = {"Date": dt.date().strftime('%Y-%m-%d')}
     for key, class_name in KEYS.items():
         text = row.find_element(By.XPATH, f'.//td[@class="{class_name}"]').text.strip()
         if key == "Impact":
             text = row.find_element(By.XPATH, ".//span[@title]").get_attribute("title")
-        cells_value[key] = text
+            if args.impact.lower() not in text.lower():
+                return None
+        cells_value[key] = text.strip()
     return cells_value
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-d", "--date", help="date format YYYY.MM.DD")
+    parser.add_argument("-d", "--date", help="date format YYYY-MM-DD")
+    parser.add_argument("-i", "--impact", help="select one of them: Low, Medium, High. Default: All impacts")
     args = parser.parse_args()
     forex_calendar(args)

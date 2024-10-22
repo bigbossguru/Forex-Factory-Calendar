@@ -27,39 +27,11 @@ def save_to_csv(df: pd.DataFrame, filepath: Path) -> None:
     if filepath.exists():
         df_read = pd.read_csv(filepath)
         df_merge = pd.concat([df, df_read])
+        df_merge = df_merge.sort_values(by="Date", ascending=False)
         df_merge.to_csv(filepath, index=False)
     else:
+        df = df.sort_values(by="Date", ascending=True)
         df.to_csv(filepath, index=False)
-
-
-def check_date_in_csv(csv_file: str | Path, date_to_check: datetime) -> bool:
-    try:
-        if isinstance(csv_file, str):
-            csv_file = Path(csv_file)
-
-        if not csv_file.exists():
-            return False
-
-        # Load CSV into DataFrame
-        df = pd.read_csv(csv_file)
-
-        # Ensure 'date' column exists
-        if "Date" not in df.columns:
-            return False
-
-        # Convert the 'date' column to datetime
-        df["Date"] = pd.to_datetime(df["Date"])
-
-        # Specify the date to check
-        check_date = pd.to_datetime(date_to_check.date())
-
-        # Check if the date exists in the DataFrame
-        exists = (df["Date"] == check_date).any()
-
-        return exists
-
-    except Exception:
-        return False
 
 
 def string_to_dt(date_string) -> datetime | None:
