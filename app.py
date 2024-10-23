@@ -1,5 +1,4 @@
 from pathlib import Path
-import time
 
 import pandas as pd
 import streamlit as st
@@ -18,6 +17,7 @@ def load_data() -> pd.DataFrame:
 
     if filepath.exists():
         return pd.read_csv(filepath)
+
 
 # Load data into session state
 if "dataframe" not in st.session_state:

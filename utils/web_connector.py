@@ -18,27 +18,30 @@ class WebDriverConnector:
         self.options.add_argument("--incognito")
         self.options.add_argument("--no-sandbox")
         self.options.add_argument("--disable-extensions")
+        self.options.add_argument("--enable-unsafe-swiftshader")
         self.options.add_argument(
             "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
         )
 
-    def _get_chrome_service(self) -> ChromeService:
+    @staticmethod
+    def _get_chrome_service() -> ChromeService:
         if platform.machine() == "aarch64":
-            chromedriver_path = os.getenv(
-                "CHROMEDRIVER", str(Path("~/chromedriver/chromedriver").expanduser())
-            )
+            chromedriver_path = os.getenv("CHROMEDRIVER", str(Path("~/chromedriver/chromedriver").expanduser()))
+            print(f"Using ChromeDriver from path: {chromedriver_path}")
             return ChromeService(executable_path=chromedriver_path)
         else:
             return ChromeService(ChromeDriverManager().install())
 
     def __enter__(self) -> webdriver.Chrome:
-        # Set up the ChromeDriver
-        self.driver = webdriver.Chrome(
-            service=self._get_chrome_service(), options=self.options
-        )
-        return self.driver
+        try:
+            # Set up the ChromeDriver
+            self.driver = webdriver.Chrome(service=self._get_chrome_service(), options=self.options)
+            return self.driver
+        except Exception as e:
+            print(f"Error initializing Chrome WebDriver: {e}")
+            raise
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
+    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
         # Clean up and close the driver
         if self.driver:
             self.driver.quit()
