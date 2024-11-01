@@ -9,7 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 
-from utils.web_connector import WebDriverConnector
+from webdrivers.chrome import WebDriverConnector
 from utils.utils import (
     get_last_or_actual_work_datetime,
     save_to_csv,

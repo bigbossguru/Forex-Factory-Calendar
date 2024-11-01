@@ -13,6 +13,7 @@ pandas = "^2.2.3"
 schedule = "^1.2.2"
 streamlit = "^1.39.0"
 watchdog = "^5.0.3"
+webdrivers = {git = "https://github.com/bigbossguru/webdrivers.git"}
 
 [tool.ruff]
 line-length = 120
